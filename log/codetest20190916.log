@@ -1,0 +1,538 @@
+[00:43:26 DBG] Starting web host
+[00:43:28 DBG] Getting MongoCollection codetest.Models.User
+[00:43:29 DBG] Creating mongo index
+[00:44:29 DBG] Starting web host
+[00:44:30 DBG] Getting MongoCollection codetest.Models.User
+[00:44:31 DBG] Creating mongo index
+[00:44:41 DBG] Getting MongoCollection codetest.Models.User
+[00:44:41 DBG] Getting MongoCollection codetest.Models.User
+[00:44:41 DBG] Creating mongo index
+[00:44:41 DBG] Creating mongo index
+[00:44:42 DBG] Getting MongoCollection codetest.Models.User
+[00:44:42 DBG] Creating mongo index
+[00:46:04 DBG] Getting MongoCollection codetest.Models.User
+[00:46:04 DBG] Creating mongo index
+[00:46:04 DBG] Getting MongoCollection codetest.Models.User
+[00:46:04 DBG] Creating mongo index
+[00:46:06 DBG] Getting MongoCollection codetest.Models.User
+[00:46:06 DBG] Creating mongo index
+[00:46:25 DBG] Getting MongoCollection codetest.Models.User
+[00:46:25 DBG] Creating mongo index
+[00:46:25 DBG] Getting MongoCollection codetest.Models.User
+[00:46:25 DBG] Creating mongo index
+[00:46:26 DBG] Getting MongoCollection codetest.Models.User
+[00:46:26 DBG] Creating mongo index
+[00:46:59 DBG] Getting MongoCollection codetest.Models.User
+[00:46:59 DBG] Getting MongoCollection codetest.Models.User
+[00:46:59 DBG] Creating mongo index
+[00:46:59 DBG] Creating mongo index
+[00:46:59 DBG] Getting MongoCollection codetest.Models.User
+[00:46:59 DBG] Creating mongo index
+[00:47:56 DBG] Getting MongoCollection codetest.Models.User
+[00:47:56 DBG] Creating mongo index
+[00:48:01 DBG] Getting MongoCollection codetest.Models.User
+[00:48:01 DBG] Creating mongo index
+[00:48:16 DBG] Getting MongoCollection codetest.Models.User
+[00:48:16 DBG] Creating mongo index
+[00:48:16 ERR] Error creating index codetest.Models.User
+[00:48:16 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.SendBuffer(IByteBuffer buffer, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessages(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.SendMessages(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.ConnectionExtensions.SendMessage(IConnection connection, RequestMessage message, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingCommandMessageWireProtocol`1.Execute(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandWireProtocol`1.Execute(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.ServerChannel.ExecuteProtocol[TResult](IWireProtocol`1 protocol, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.ServerChannel.Command[TResult](ICoreSession session, ReadPreference readPreference, DatabaseNamespace databaseNamespace, BsonDocument command, IEnumerable`1 commandPayloads, IElementNameValidator commandValidator, BsonDocument additionalOptions, Action`1 postWriteAction, CommandResponseHandling responseHandling, IBsonSerializer`1 resultSerializer, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CommandOperationBase`1.ExecuteProtocol(IChannelHandle channel, ICoreSessionHandle session, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CommandOperationBase`1.ExecuteProtocol(IChannelSource channelSource, ICoreSessionHandle session, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.WriteCommandOperation`1.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesUsingCommandOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[00:53:04 DBG] Starting web host
+[00:53:21 DBG] Getting MongoCollection codetest.Models.User
+[00:53:21 DBG] Creating mongo index
+[00:53:51 DBG] Getting MongoCollection codetest.Models.User
+[00:53:51 DBG] Getting MongoCollection codetest.Models.User
+[00:53:51 DBG] Creating mongo index
+[00:53:51 DBG] Creating mongo index
+[00:53:51 DBG] Getting MongoCollection codetest.Models.User
+[00:53:51 DBG] Creating mongo index
+[00:54:23 DBG] Getting MongoCollection codetest.Models.User
+[00:54:23 DBG] Creating mongo index
+[00:54:30 DBG] Getting MongoCollection codetest.Models.User
+[00:54:30 DBG] Creating mongo index
+[00:58:14 DBG] Starting web host
+[00:58:16 DBG] Getting MongoCollection codetest.Models.User
+[00:58:16 DBG] Creating mongo index
+[00:58:27 DBG] Getting MongoCollection codetest.Models.User
+[00:58:27 DBG] Creating mongo index
+[00:58:34 DBG] Getting MongoCollection codetest.Models.User
+[00:58:34 DBG] Creating mongo index
+[00:58:52 DBG] Getting MongoCollection codetest.Models.User
+[00:58:52 DBG] Creating mongo index
+[00:58:57 DBG] Getting MongoCollection codetest.Models.User
+[00:58:57 DBG] Creating mongo index
+[00:59:09 DBG] Getting MongoCollection codetest.Models.User
+[00:59:09 DBG] Creating mongo index
+[00:59:24 DBG] Getting MongoCollection codetest.Models.User
+[00:59:24 DBG] Creating mongo index
+[00:59:28 DBG] Getting MongoCollection codetest.Models.User
+[00:59:28 DBG] Creating mongo index
+[01:01:21 DBG] Getting MongoCollection codetest.Models.User
+[01:01:21 DBG] Creating mongo index
+[01:06:03 DBG] Starting web host
+[01:06:11 DBG] Getting MongoCollection codetest.Models.User
+[01:06:11 DBG] Creating mongo index
+[01:06:25 DBG] Getting MongoCollection codetest.Models.User
+[01:06:25 DBG] Creating mongo index
+[01:06:47 DBG] Getting MongoCollection codetest.Models.User
+[01:06:47 DBG] Creating mongo index
+[01:06:55 DBG] Getting MongoCollection codetest.Models.User
+[01:06:55 DBG] Creating mongo index
+[01:15:36 DBG] Starting web host
+[01:15:53 DBG] Getting MongoCollection codetest.Models.User
+[01:15:53 DBG] Creating mongo index
+[01:17:53 DBG] Getting MongoCollection codetest.Models.User
+[01:17:53 DBG] Creating mongo index
+[01:18:36 DBG] Getting MongoCollection codetest.Models.User
+[01:18:36 DBG] Creating mongo index
+[01:18:41 DBG] Getting MongoCollection codetest.Models.User
+[01:18:41 DBG] Creating mongo index
+[01:19:06 DBG] Getting MongoCollection codetest.Models.User
+[01:19:06 DBG] Creating mongo index
+[01:19:38 DBG] Getting MongoCollection codetest.Models.User
+[01:19:38 DBG] Creating mongo index
+[01:20:01 DBG] Getting MongoCollection codetest.Models.User
+[01:20:01 DBG] Creating mongo index
+[01:20:25 DBG] Getting MongoCollection codetest.Models.User
+[01:20:25 DBG] Creating mongo index
+[01:20:32 DBG] Getting MongoCollection codetest.Models.User
+[01:20:32 DBG] Creating mongo index
+[01:20:38 DBG] Getting MongoCollection codetest.Models.User
+[01:20:38 DBG] Creating mongo index
+[01:21:21 DBG] Starting web host
+[01:21:23 DBG] Getting MongoCollection codetest.Models.User
+[01:21:23 DBG] Creating mongo index
+[01:21:31 DBG] Getting MongoCollection codetest.Models.User
+[01:21:31 DBG] Creating mongo index
+[01:21:38 DBG] Getting MongoCollection codetest.Models.User
+[01:21:38 DBG] Creating mongo index
+[01:22:39 DBG] Starting web host
+[01:22:41 DBG] Getting MongoCollection codetest.Models.User
+[01:22:41 DBG] Creating mongo index
+[01:23:34 DBG] Getting MongoCollection codetest.Models.User
+[01:23:34 DBG] Creating mongo index
+[01:25:40 DBG] Starting web host
+[01:25:43 DBG] Getting MongoCollection codetest.Models.User
+[01:25:43 DBG] Creating mongo index
+[01:26:23 DBG] Getting MongoCollection codetest.Models.User
+[01:26:23 DBG] Creating mongo index
+[01:26:54 DBG] Getting MongoCollection codetest.Models.User
+[01:26:54 DBG] Creating mongo index
+[01:27:08 DBG] Getting MongoCollection codetest.Models.User
+[01:27:08 DBG] Creating mongo index
+[01:27:14 DBG] Getting MongoCollection codetest.Models.User
+[01:27:14 DBG] Creating mongo index
+[01:27:16 ERR] Error creating index codetest.Models.User
+[01:27:16 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[01:27:26 DBG] Starting web host
+[01:27:28 DBG] Getting MongoCollection codetest.Models.User
+[01:27:28 DBG] Creating mongo index
+[01:27:40 DBG] Starting web host
+[01:27:42 DBG] Getting MongoCollection codetest.Models.User
+[01:27:42 DBG] Creating mongo index
+[01:27:52 DBG] Getting MongoCollection codetest.Models.User
+[01:27:52 DBG] Creating mongo index
+[01:28:08 DBG] Getting MongoCollection codetest.Models.User
+[01:28:08 DBG] Creating mongo index
+[01:28:53 DBG] Getting MongoCollection codetest.Models.User
+[01:28:53 DBG] Creating mongo index
+[01:31:00 DBG] Getting MongoCollection codetest.Models.User
+[01:31:00 DBG] Creating mongo index
+[01:31:24 DBG] Getting MongoCollection codetest.Models.User
+[01:31:24 DBG] Creating mongo index
+[01:35:45 DBG] Starting web host
+[01:35:46 DBG] Getting MongoCollection codetest.Models.User
+[01:35:46 DBG] Creating mongo index
+[01:35:58 DBG] Getting MongoCollection codetest.Models.User
+[01:35:58 DBG] Creating mongo index
+[01:36:15 DBG] Getting MongoCollection codetest.Models.User
+[01:36:15 DBG] Creating mongo index
+[01:36:32 DBG] Getting MongoCollection codetest.Models.User
+[01:36:32 DBG] Creating mongo index
+[01:37:00 DBG] Getting MongoCollection codetest.Models.User
+[01:37:00 DBG] Creating mongo index
+[01:37:13 DBG] Getting MongoCollection codetest.Models.User
+[01:37:13 DBG] Creating mongo index
+[01:37:23 DBG] Getting MongoCollection codetest.Models.User
+[01:37:23 DBG] Creating mongo index
+[01:37:25 DBG] Getting MongoCollection codetest.Models.User
+[01:37:25 DBG] Creating mongo index
+[01:37:32 DBG] Getting MongoCollection codetest.Models.User
+[01:37:32 DBG] Creating mongo index
+[01:37:35 DBG] Getting MongoCollection codetest.Models.User
+[01:37:35 DBG] Creating mongo index
+[01:37:56 DBG] Getting MongoCollection codetest.Models.User
+[01:37:56 DBG] Creating mongo index
+[01:38:33 DBG] Getting MongoCollection codetest.Models.User
+[01:38:33 DBG] Creating mongo index
+[08:26:03 DBG] Starting web host
+[08:26:05 DBG] Getting MongoCollection codetest.Models.User
+[08:26:05 DBG] Creating mongo index
+[08:26:23 DBG] Getting MongoCollection codetest.Models.User
+[08:26:23 DBG] Creating mongo index
+[08:26:44 DBG] Starting web host
+[08:26:52 DBG] Getting MongoCollection codetest.Models.User
+[08:26:52 DBG] Getting MongoCollection codetest.Models.User
+[08:26:52 DBG] Creating mongo index
+[08:26:52 DBG] Creating mongo index
+[08:27:51 DBG] Getting MongoCollection codetest.Models.User
+[08:27:51 DBG] Creating mongo index
+[08:29:03 DBG] Getting MongoCollection codetest.Models.User
+[08:29:03 DBG] Creating mongo index
+[08:29:36 DBG] Getting MongoCollection codetest.Models.User
+[08:29:36 DBG] Creating mongo index
+[08:35:44 DBG] Starting web host
+[08:35:51 DBG] Getting MongoCollection codetest.Models.User
+[08:35:52 DBG] Creating mongo index
+[08:36:23 ERR] Error creating index codetest.Models.User
+[08:36:23 ERR]    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.WritableServerBinding.GetWriteChannelSource(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadWriteBindingHandle.GetWriteChannelSource(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[08:36:53 ERR] An unhandled exception has occurred while executing the request.
+System.TimeoutException: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "ReplicaSet", Type : "ReplicaSet", State : "Connected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/bon-do-shard-00-00-c1gyl.mongodb.net:27017" }", EndPoint: "Unspecified/bon-do-shard-00-00-c1gyl.mongodb.net:27017", State: "Connected", Type: "ReplicaSetSecondary", Tags: "{ provider : AWS, nodeType : ELECTABLE, region : EU_CENTRAL_1 }", WireVersionRange: "[0, 7]" }, { ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/bon-do-shard-00-01-c1gyl.mongodb.net:27017" }", EndPoint: "Unspecified/bon-do-shard-00-01-c1gyl.mongodb.net:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 3.120.95.31:27017
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ConnectAsync(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.SslStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.HeartbeatAsync(CancellationToken cancellationToken)" }, { ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/bon-do-shard-00-02-c1gyl.mongodb.net:27017" }", EndPoint: "Unspecified/bon-do-shard-00-02-c1gyl.mongodb.net:27017", State: "Connected", Type: "ReplicaSetSecondary", Tags: "{ region : EU_CENTRAL_1, provider : AWS, nodeType : ELECTABLE }", WireVersionRange: "[0, 7]" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSource(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadBindingHandle.GetReadChannelSource(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.GetAllSync(SortDefinition`1 sort, ProjectionDefinition`1 projection) in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 296
+   at codetest.Controllers.HomeController.Index() in D:\My Projects\NewFirm Codetest\codetest\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[08:37:07 DBG] Getting MongoCollection codetest.Models.User
+[08:37:07 DBG] Creating mongo index
+[08:37:16 DBG] Getting MongoCollection codetest.Models.User
+[08:37:16 DBG] Creating mongo index
+[08:39:37 DBG] Starting web host
+[08:39:38 DBG] Getting MongoCollection codetest.Models.User
+[08:39:38 DBG] Creating mongo index
+[08:39:49 DBG] Getting MongoCollection codetest.Models.User
+[08:39:49 DBG] Creating mongo index
+[08:44:47 DBG] Starting web host
+[08:44:59 DBG] Getting MongoCollection codetest.Models.User
+[08:44:59 DBG] Creating mongo index
+[08:45:21 ERR] Error creating index codetest.Models.User
+[08:45:22 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[08:45:30 DBG] Getting MongoCollection codetest.Models.User
+[08:45:30 DBG] Creating mongo index
+[08:45:35 DBG] Getting MongoCollection codetest.Models.User
+[08:45:35 DBG] Creating mongo index
+[08:45:39 DBG] Getting MongoCollection codetest.Models.User
+[08:45:39 DBG] Creating mongo index
+[08:46:37 DBG] Getting MongoCollection codetest.Models.User
+[08:46:37 DBG] Creating mongo index
+[08:47:51 DBG] Starting web host
+[08:47:52 DBG] Getting MongoCollection codetest.Models.User
+[08:47:53 DBG] Creating mongo index
+[08:48:10 DBG] Getting MongoCollection codetest.Models.User
+[08:48:10 DBG] Creating mongo index
+[08:48:12 DBG] Getting MongoCollection codetest.Models.User
+[08:48:12 DBG] Creating mongo index
+[08:48:31 DBG] Getting MongoCollection codetest.Models.User
+[08:48:31 DBG] Creating mongo index
+[08:49:25 DBG] Getting MongoCollection codetest.Models.User
+[08:49:25 DBG] Creating mongo index
+[08:50:02 DBG] Starting web host
+[08:50:03 DBG] Getting MongoCollection codetest.Models.User
+[08:50:03 DBG] Creating mongo index
+[08:50:32 DBG] Getting MongoCollection codetest.Models.User
+[08:50:32 DBG] Creating mongo index
+[08:50:37 DBG] Getting MongoCollection codetest.Models.User
+[08:50:37 DBG] Creating mongo index
+[08:52:09 DBG] Starting web host
+[08:52:11 DBG] Getting MongoCollection codetest.Models.User
+[08:52:11 DBG] Creating mongo index
+[08:52:34 ERR] Error creating index codetest.Models.User
+[08:52:34 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[08:52:50 DBG] Getting MongoCollection codetest.Models.User
+[08:52:50 DBG] Creating mongo index
+[08:53:57 DBG] Getting MongoCollection codetest.Models.User
+[08:53:57 DBG] Creating mongo index
+[08:53:57 DBG] Getting MongoCollection codetest.Models.User
+[08:53:57 DBG] Creating mongo index
+[08:53:59 DBG] Getting MongoCollection codetest.Models.User
+[08:53:59 DBG] Creating mongo index
+[08:54:05 DBG] Getting MongoCollection codetest.Models.User
+[08:54:05 DBG] Creating mongo index
+[08:54:41 ERR] Error creating index codetest.Models.User
+[08:54:41 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[08:58:11 DBG] Starting web host
+[08:58:18 DBG] Getting MongoCollection codetest.Models.User
+[08:58:18 DBG] Creating mongo index
+[08:58:36 DBG] Getting MongoCollection codetest.Models.User
+[08:58:36 DBG] Creating mongo index
+[08:58:41 DBG] Getting MongoCollection codetest.Models.User
+[08:58:41 DBG] Creating mongo index
+[08:58:58 DBG] Getting MongoCollection codetest.Models.User
+[08:58:58 DBG] Creating mongo index
+[08:59:56 DBG] Getting MongoCollection codetest.Models.User
+[08:59:56 DBG] Creating mongo index
+[09:00:01 DBG] Getting MongoCollection codetest.Models.User
+[09:00:01 DBG] Creating mongo index
+[09:00:13 DBG] Getting MongoCollection codetest.Models.User
+[09:00:13 DBG] Creating mongo index
+[09:00:20 DBG] Getting MongoCollection codetest.Models.User
+[09:00:20 DBG] Creating mongo index
+[09:03:01 DBG] Starting web host
+[09:03:03 DBG] Getting MongoCollection codetest.Models.User
+[09:03:03 DBG] Creating mongo index
+[09:16:44 DBG] Getting MongoCollection codetest.Models.User
+[09:16:44 DBG] Creating mongo index
+[09:16:50 DBG] Getting MongoCollection codetest.Models.User
+[09:16:50 DBG] Creating mongo index
+[09:22:53 DBG] Starting web host
+[09:22:55 DBG] Getting MongoCollection codetest.Models.User
+[09:22:56 DBG] Creating mongo index
+[09:23:27 ERR] Error creating index codetest.Models.User
+[09:23:27 ERR]    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.WritableServerBinding.GetWriteChannelSource(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadWriteBindingHandle.GetWriteChannelSource(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[09:23:48 DBG] Getting MongoCollection codetest.Models.User
+[09:23:48 DBG] Creating mongo index
+[09:24:00 DBG] Getting MongoCollection codetest.Models.User
+[09:24:00 DBG] Creating mongo index
+[09:24:02 DBG] Getting MongoCollection codetest.Models.User
+[09:24:02 DBG] Creating mongo index
+[09:24:41 DBG] Getting MongoCollection codetest.Models.User
+[09:24:41 DBG] Creating mongo index
+[09:25:21 DBG] Getting MongoCollection codetest.Models.User
+[09:25:21 DBG] Creating mongo index
+[09:26:46 DBG] Getting MongoCollection codetest.Models.User
+[09:26:46 DBG] Creating mongo index
+[09:26:59 DBG] Getting MongoCollection codetest.Models.User
+[09:26:59 DBG] Creating mongo index
+[09:27:01 DBG] Getting MongoCollection codetest.Models.User
+[09:27:01 DBG] Creating mongo index
+[09:27:01 DBG] Getting MongoCollection codetest.Models.User
+[09:27:01 DBG] Creating mongo index
+[09:27:01 DBG] Getting MongoCollection codetest.Models.User
+[09:27:01 DBG] Creating mongo index
+[09:27:01 DBG] Getting MongoCollection codetest.Models.User
+[09:27:01 DBG] Creating mongo index
+[09:27:01 DBG] Getting MongoCollection codetest.Models.User
+[09:27:01 DBG] Creating mongo index
+[09:27:01 DBG] Getting MongoCollection codetest.Models.User
+[09:27:01 DBG] Creating mongo index
+[09:27:02 DBG] Getting MongoCollection codetest.Models.User
+[09:27:02 DBG] Creating mongo index
+[09:27:02 DBG] Getting MongoCollection codetest.Models.User
+[09:27:02 DBG] Creating mongo index
+[09:27:14 DBG] Starting web host
+[09:27:16 DBG] Getting MongoCollection codetest.Models.User
+[09:27:16 DBG] Creating mongo index
+[09:27:38 ERR] Error creating index codetest.Models.User
+[09:27:38 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[09:28:00 ERR] An unhandled exception has occurred while executing the request.
+MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 3.120.95.31:27017
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.SslStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.GetAllSync(SortDefinition`1 sort, ProjectionDefinition`1 projection) in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 296
+   at codetest.Controllers.HomeController.Index() in D:\My Projects\NewFirm Codetest\codetest\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[09:30:35 DBG] Starting web host
+[09:30:47 DBG] Getting MongoCollection codetest.Models.User
+[09:30:47 DBG] Creating mongo index
+[09:31:39 DBG] Getting MongoCollection codetest.Models.User
+[09:31:39 DBG] Creating mongo index
+[09:31:57 DBG] Starting web host
+[09:32:09 DBG] Getting MongoCollection codetest.Models.User
+[09:32:09 DBG] Creating mongo index
+[09:32:50 DBG] Getting MongoCollection codetest.Models.User
+[09:32:50 DBG] Creating mongo index

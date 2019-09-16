@@ -1,0 +1,44 @@
+﻿@using codetest.Models.ViewModels
+@model UsersViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<br />
+<br />
+<div>
+    <a asp-controller="Home" asp-action="AddUser" data-ajax="true" data-ajax-method="get" data-ajax-update="#ModalData" data-ajax-mode="replace" data-ajax-success="toggleModal()" class="btn btn-primary">Add User</a>
+</div>
+
+<div id="GetAllData">
+    <partial name="GetAllUsers" model="@Model" />
+</div>
+
+
+
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="ModalData">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script>
+        function toggleModal() {
+            $("#Modal").modal("toggle");
+        }
+    </script>
+}

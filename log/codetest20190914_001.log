@@ -1,0 +1,409 @@
+[16:38:37 DBG] Starting web host
+[16:38:38 FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use. ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+[16:38:38 FTL] Host terminated unexpectedly
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use. ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at codetest.Program.Main(String[] args) in D:\My Projects\NewFirm Codetest\codetest\Program.cs:line 28
+[16:38:50 DBG] Starting web host
+[16:38:50 FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use. ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+[16:38:50 FTL] Host terminated unexpectedly
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use. ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at codetest.Program.Main(String[] args) in D:\My Projects\NewFirm Codetest\codetest\Program.cs:line 28
+[16:39:01 DBG] Starting web host
+[16:39:03 FTL] Application startup exception
+System.InvalidOperationException: Application is running inside IIS process but is not configured to use IIS server.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+[16:51:13 DBG] Starting web host
+[16:51:16 DBG] Getting MongoCollection codetest.Models.User
+[16:51:16 DBG] Creating mongo index
+[16:53:50 DBG] Getting MongoCollection codetest.Models.User
+[16:53:50 DBG] Creating mongo index
+[16:54:10 DBG] Getting MongoCollection codetest.Models.User
+[16:54:10 DBG] Creating mongo index
+[16:54:34 DBG] Getting MongoCollection codetest.Models.User
+[16:54:34 DBG] Creating mongo index
+[16:54:35 DBG] Getting MongoCollection codetest.Models.User
+[16:54:35 DBG] Creating mongo index
+[16:54:36 DBG] Getting MongoCollection codetest.Models.User
+[16:54:36 DBG] Creating mongo index
+[16:54:38 DBG] Getting MongoCollection codetest.Models.User
+[16:54:38 DBG] Creating mongo index
+[16:54:46 DBG] Getting MongoCollection codetest.Models.User
+[16:54:46 DBG] Creating mongo index
+[16:54:46 DBG] Getting MongoCollection codetest.Models.User
+[16:54:46 DBG] Creating mongo index
+[17:21:40 DBG] Getting MongoCollection codetest.Models.User
+[17:21:40 DBG] Creating mongo index
+[18:15:09 DBG] Starting web host
+[18:15:12 DBG] Getting MongoCollection codetest.Models.User
+[18:15:12 DBG] Creating mongo index
+[18:15:39 DBG] Getting MongoCollection codetest.Models.User
+[18:15:39 DBG] Creating mongo index
+[18:15:41 ERR] The view 'CreateUser' was not found. Searched locations: ["/Views/Home/CreateUser.cshtml","/Views/Shared/CreateUser.cshtml","/Pages/Shared/CreateUser.cshtml"]
+[18:15:41 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'CreateUser' was not found. The following locations were searched:
+/Views/Home/CreateUser.cshtml
+/Views/Shared/CreateUser.cshtml
+/Pages/Shared/CreateUser.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[18:16:41 DBG] Starting web host
+[18:16:45 DBG] Getting MongoCollection codetest.Models.User
+[18:16:45 DBG] Creating mongo index
+[18:28:35 DBG] Starting web host
+[18:28:43 DBG] Getting MongoCollection codetest.Models.User
+[18:28:43 DBG] Creating mongo index
+[18:28:55 DBG] Getting MongoCollection codetest.Models.User
+[18:28:55 DBG] Creating mongo index
+[18:30:02 DBG] Getting MongoCollection codetest.Models.User
+[18:30:02 DBG] Creating mongo index
+[18:57:40 DBG] Getting MongoCollection codetest.Models.User
+[18:57:40 DBG] Creating mongo index
+[19:06:03 DBG] Getting MongoCollection codetest.Models.User
+[19:06:03 DBG] Creating mongo index
+[19:18:34 DBG] Getting MongoCollection codetest.Models.User
+[19:18:34 DBG] Creating mongo index
+[19:18:42 ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: User not valid.
+   at codetest.Controllers.Api.UserController.Add(User user) in D:\My Projects\NewFirm Codetest\codetest\Controllers\Api\UserController.cs:line 34
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[19:19:33 DBG] Getting MongoCollection codetest.Models.User
+[19:19:33 DBG] Creating mongo index
+[19:19:46 DBG] Getting MongoCollection codetest.Models.User
+[19:19:46 DBG] Creating mongo index
+[19:19:50 DBG] Getting MongoCollection codetest.Models.User
+[19:19:50 DBG] Creating mongo index
+[19:20:30 DBG] Getting MongoCollection codetest.Models.User
+[19:20:30 DBG] Creating mongo index
+[19:20:30 ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: User not valid.
+   at codetest.Controllers.Api.UserController.Add(User user) in D:\My Projects\NewFirm Codetest\codetest\Controllers\Api\UserController.cs:line 34
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[19:21:06 DBG] Getting MongoCollection codetest.Models.User
+[19:21:06 DBG] Creating mongo index
+[19:23:43 DBG] Getting MongoCollection codetest.Models.User
+[19:23:43 DBG] Creating mongo index
+[19:23:54 DBG] Getting MongoCollection codetest.Models.User
+[19:23:54 DBG] Creating mongo index
+[19:26:46 DBG] Getting MongoCollection codetest.Models.User
+[19:26:46 DBG] Creating mongo index
+[19:27:00 ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: User not valid.
+   at codetest.Controllers.Api.UserController.Add(User user) in D:\My Projects\NewFirm Codetest\codetest\Controllers\Api\UserController.cs:line 34
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[19:37:48 DBG] Getting MongoCollection codetest.Models.User
+[19:37:48 DBG] Creating mongo index
+[19:38:15 DBG] Getting MongoCollection codetest.Models.User
+[19:38:15 DBG] Creating mongo index
+[20:01:52 DBG] Starting web host
+[20:01:54 DBG] Getting MongoCollection codetest.Models.User
+[20:01:54 DBG] Creating mongo index
+[20:02:17 DBG] Getting MongoCollection codetest.Models.User
+[20:02:17 DBG] Creating mongo index
+[20:02:20 DBG] Getting MongoCollection codetest.Models.User
+[20:02:20 DBG] Creating mongo index
+[20:02:30 DBG] Getting MongoCollection codetest.Models.User
+[20:02:30 DBG] Creating mongo index
+[20:02:32 DBG] Getting MongoCollection codetest.Models.User
+[20:02:32 DBG] Creating mongo index
+[20:02:45 DBG] Getting MongoCollection codetest.Models.User
+[20:02:45 DBG] Creating mongo index
+[20:03:09 DBG] Getting MongoCollection codetest.Models.User
+[20:03:09 DBG] Creating mongo index
+[20:03:59 DBG] Starting web host
+[20:04:01 DBG] Getting MongoCollection codetest.Models.User
+[20:04:01 DBG] Creating mongo index
+[20:04:19 DBG] Getting MongoCollection codetest.Models.User
+[20:04:19 DBG] Creating mongo index
+[20:04:30 DBG] Getting MongoCollection codetest.Models.User
+[20:04:30 DBG] Creating mongo index
+[20:04:50 DBG] Getting MongoCollection codetest.Models.User
+[20:04:50 DBG] Creating mongo index
+[20:04:52 DBG] Getting MongoCollection codetest.Models.User
+[20:04:52 DBG] Creating mongo index
+[20:04:52 DBG] Getting MongoCollection codetest.Models.User
+[20:04:52 DBG] Creating mongo index
+[20:04:53 DBG] Getting MongoCollection codetest.Models.User
+[20:04:53 DBG] Creating mongo index
+[20:04:55 DBG] Getting MongoCollection codetest.Models.User
+[20:04:55 DBG] Creating mongo index
+[20:04:58 DBG] Getting MongoCollection codetest.Models.User
+[20:04:58 DBG] Creating mongo index
+[20:04:59 DBG] Getting MongoCollection codetest.Models.User
+[20:04:59 DBG] Creating mongo index
+[20:05:00 DBG] Getting MongoCollection codetest.Models.User
+[20:05:00 DBG] Creating mongo index
+[20:05:40 DBG] Getting MongoCollection codetest.Models.User
+[20:05:40 DBG] Creating mongo index
+[20:05:53 DBG] Getting MongoCollection codetest.Models.User
+[20:05:53 DBG] Creating mongo index
+[20:05:55 DBG] Getting MongoCollection codetest.Models.User
+[20:05:55 DBG] Creating mongo index
+[20:05:59 DBG] Getting MongoCollection codetest.Models.User
+[20:05:59 DBG] Creating mongo index
+[20:06:05 DBG] Getting MongoCollection codetest.Models.User
+[20:06:05 DBG] Creating mongo index
+[20:06:07 ERR] Error creating index codetest.Models.User
+[20:06:07 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[20:06:08 DBG] Getting MongoCollection codetest.Models.User
+[20:06:08 DBG] Creating mongo index
+[20:06:08 DBG] Getting MongoCollection codetest.Models.User
+[20:06:08 DBG] Creating mongo index
+[20:06:08 DBG] Getting MongoCollection codetest.Models.User
+[20:06:08 DBG] Creating mongo index
+[20:06:08 DBG] Getting MongoCollection codetest.Models.User
+[20:06:08 DBG] Creating mongo index
+[20:06:08 DBG] Getting MongoCollection codetest.Models.User
+[20:06:08 DBG] Creating mongo index
+[20:06:08 DBG] Getting MongoCollection codetest.Models.User
+[20:06:08 DBG] Creating mongo index
+[20:06:08 DBG] Getting MongoCollection codetest.Models.User
+[20:06:08 DBG] Creating mongo index
+[20:06:08 DBG] Getting MongoCollection codetest.Models.User
+[20:06:08 DBG] Creating mongo index
+[20:06:09 DBG] Getting MongoCollection codetest.Models.User
+[20:06:09 DBG] Creating mongo index
+[20:06:17 DBG] Getting MongoCollection codetest.Models.User
+[20:06:17 DBG] Creating mongo index
+[20:06:19 DBG] Getting MongoCollection codetest.Models.User
+[20:06:19 DBG] Creating mongo index
+[20:06:30 ERR] Error creating index codetest.Models.User
+[20:06:30 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[20:06:45 DBG] Getting MongoCollection codetest.Models.User
+[20:06:45 DBG] Creating mongo index
+[20:06:55 DBG] Getting MongoCollection codetest.Models.User
+[20:06:55 DBG] Creating mongo index
+[20:06:57 DBG] Getting MongoCollection codetest.Models.User
+[20:06:57 DBG] Creating mongo index
+[20:07:05 DBG] Getting MongoCollection codetest.Models.User
+[20:07:05 DBG] Creating mongo index
+[20:07:35 ERR] Error creating index codetest.Models.User
+[20:07:35 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[20:11:48 DBG] Getting MongoCollection codetest.Models.User
+[20:11:48 DBG] Creating mongo index
+[20:12:00 DBG] Getting MongoCollection codetest.Models.User
+[20:12:00 DBG] Creating mongo index
+[20:12:02 DBG] Getting MongoCollection codetest.Models.User
+[20:12:02 DBG] Creating mongo index
+[20:12:03 DBG] Getting MongoCollection codetest.Models.User
+[20:12:03 DBG] Creating mongo index
+[20:12:05 DBG] Getting MongoCollection codetest.Models.User
+[20:12:05 DBG] Creating mongo index
+[20:12:07 DBG] Getting MongoCollection codetest.Models.User
+[20:12:07 DBG] Creating mongo index
+[20:12:08 DBG] Getting MongoCollection codetest.Models.User
+[20:12:08 DBG] Creating mongo index
+[20:12:10 DBG] Getting MongoCollection codetest.Models.User
+[20:12:10 DBG] Creating mongo index
+[20:22:23 DBG] Getting MongoCollection codetest.Models.User
+[20:22:23 DBG] Creating mongo index
+[20:25:00 DBG] Getting MongoCollection codetest.Models.User
+[20:25:00 DBG] Creating mongo index
+[20:25:43 DBG] Getting MongoCollection codetest.Models.User
+[20:25:43 DBG] Creating mongo index
+[20:26:02 DBG] Getting MongoCollection codetest.Models.User
+[20:26:02 DBG] Creating mongo index
+[20:26:44 DBG] Getting MongoCollection codetest.Models.User
+[20:26:44 DBG] Creating mongo index
+[20:27:32 DBG] Getting MongoCollection codetest.Models.User
+[20:27:32 DBG] Creating mongo index
+[20:28:37 DBG] Getting MongoCollection codetest.Models.User
+[20:28:37 DBG] Creating mongo index
+[20:28:37 ERR] Error creating index codetest.Models.User
+[20:28:37 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenConnectionHelper.FailedOpeningConnection(Exception wrappedException)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55

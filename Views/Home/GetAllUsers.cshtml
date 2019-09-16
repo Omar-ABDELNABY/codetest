@@ -1,0 +1,38 @@
+﻿@using codetest.Models.ViewModels
+@model UsersViewModel
+
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr class="user" data-userid="@user.Id">
+                    <td>@user.Name</td>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                    <td>@user.Address</td>
+                    <td>
+                        <a asp-controller="Home" asp-action="DetailsOFUser" asp-route-id="@user.Id" data-ajax="true" data-ajax-method="get" data-ajax-mode="replace" data-ajax-update="#ModalData" data-ajax-success="toggleModal()" class="btn btn-info">Details</a>
+                        <a asp-controller="Home" asp-action="EditUser" asp-route-id="@user.Id" data-ajax="true" data-ajax-method="get" data-ajax-mode="replace" data-ajax-update="#ModalData" data-ajax-success="toggleModal()" class="btn btn-warning">Edit</a>
+                        <a asp-controller="Home" asp-action="DeleteUser" data-ajax="true" asp-route-id="@user.Id" data-ajax-method="get" data-ajax-mode="replace" data-ajax-update="#GetAllData" class="btn btn-danger">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div id="userModal">
+    </div>
+</div>
+
