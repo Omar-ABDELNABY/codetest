@@ -15,6 +15,7 @@
 
   <Target Name="MyPreCompileTarget" BeforeTargets="BeforeBuild">
     <Exec Command="gulp ts" />
+    <Exec Command="gulp styles" />
   </Target>
 
   <Target Name="TestTarget" AfterTargets="ProjectOpen">

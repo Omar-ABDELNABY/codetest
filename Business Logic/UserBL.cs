@@ -43,5 +43,24 @@ namespace codetest.Business_Logic
             return new CustomResponse { success = true, responseText = "User successfully Edited!" };
 
         }
+
+        public static User GetUserByID(string id, IUserRepository _userRepository)
+        {
+            return _userRepository.GetSingleByExpression(x => x.Id == id).Result;
+        }
+
+        public static ICollection<User> GetAllUsersSync(IUserRepository _userRepository)
+        {
+            return _userRepository.GetAllSync();
+        }
+
+        public static void DeleteUserByIDSync (string id, IUserRepository _userRepository)
+        {
+            _userRepository.DeleteSync(x => x.Id == id);
+        }
+        public static void AddManyUsersSync(List<User> users, IUserRepository _userRepository)
+        {
+            _userRepository.AddManySync(users);
+        }
     }
 }

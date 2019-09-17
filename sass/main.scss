@@ -1,0 +1,39 @@
+$myfont: Georgia 1.2em;
+$table_head_col: #ccc;
+$table_row_col: #eee;
+$table_bor_col: #eee;
+$first_col_width: 150px;
+$marginTop: 100px;
+$formBorder: 1px solid grey;
+$formPadding: 50px 50px 10px 50px;
+$formBorderRadius: 5px;
+
+table {
+
+    tr:nth-child(odd) {background: $table_row_col}
+
+    td:first-child {width: $first_col_width}
+  
+    th {
+        background-color: $table_head_col;
+    }
+
+    border: 1px solid $table_bor_col;
+}
+
+.cust_center {
+    margin: auto;
+}
+
+.cust_center_inlineToBlk {
+    margin: auto;
+    display: block;
+}
+
+.cust_center_form {
+    margin-top: $marginTop;
+    border: $formBorder;
+    padding: $formPadding;
+    border-radius: $formBorderRadius;
+}
+

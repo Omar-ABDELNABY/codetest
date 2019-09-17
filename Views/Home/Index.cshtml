@@ -9,9 +9,9 @@
 <br />
 <br />
 <div>
-    <a asp-controller="Home" asp-action="AddUser" data-ajax="true" data-ajax-method="get" data-ajax-update="#ModalData" data-ajax-mode="replace" data-ajax-success="toggleModal()" class="btn btn-primary">Add User</a>
+    <a asp-controller="Home" asp-action="CreateUser" data-ajax="true" data-ajax-method="get" data-ajax-update="#ModalData" data-ajax-mode="replace" data-ajax-success="toggleModal()" class="btn btn-primary">Add User</a>
 </div>
-
+<br />
 <div id="GetAllData">
     <partial name="GetAllUsers" model="@Model" />
 </div>

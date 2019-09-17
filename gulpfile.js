@@ -13,6 +13,8 @@ const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const sourcemaps = require("gulp-sourcemaps");
 
+const sass = require('gulp-sass');
+
 const path = require("path");
 
 gulp.task('ts', gulp.series(() => {
@@ -43,6 +45,13 @@ gulp.task('ts', gulp.series(() => {
     .pipe(gulp.dest(path.join('.', 'wwwroot', 'js')));
 }));
 
+gulp.task("styles", () => {
+    return gulp.src('sass/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./wwwroot/css'));
+});
+
+
 gulp.task("watch", () => {
   gulp.watch(
     [
@@ -50,7 +59,9 @@ gulp.task("watch", () => {
       "./scripts/*.ts"
     ],
     gulp.series(["ts"])
-  );
+    );
+ gulp.watch("./sass/*.scss",["styles"]);
 });
+
 
 gulp.task("default", gulp.parallel(["ts", "watch"]));

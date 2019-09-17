@@ -536,3 +536,322 @@ MongoDB.Driver.MongoConnectionException: An exception occurred while opening a c
 [09:32:09 DBG] Creating mongo index
 [09:32:50 DBG] Getting MongoCollection codetest.Models.User
 [09:32:50 DBG] Creating mongo index
+[10:17:09 DBG] Starting web host
+[10:17:26 ERR] An unhandled exception has occurred while executing the request.
+DnsClient.DnsResponseException: No connection could be established to any of the following name servers: 192.168.43.1:53 (Udp: 512), [2c0f:fc89:8018:37c5::23]:53 (Udp: 1280).
+   at DnsClient.LookupClient.ResolveQuery(DnsMessageHandler handler, DnsRequestMessage request, Audit continueAudit)
+   at DnsClient.LookupClient.Query(DnsQuestion question)
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Resolve()
+   at MongoDB.Driver.MongoUrl.Resolve()
+   at MongoDB.Driver.MongoClientSettings.FromUrl(MongoUrl url)
+   at MongoDB.Driver.MongoClient..ctor(String connectionString)
+   at codetest.Startup.<>c__DisplayClass5_0.<ConfigureServices>b__0(IServiceProvider provider) in D:\My Projects\NewFirm Codetest\codetest\Startup.cs:line 33
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at codetest.Startup.<>c__DisplayClass5_0.<ConfigureServices>b__1(IServiceProvider provider) in D:\My Projects\NewFirm Codetest\codetest\Startup.cs:line 37
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[10:18:28 DBG] Starting web host
+[10:18:30 DBG] Getting MongoCollection codetest.Models.User
+[10:18:30 DBG] Creating mongo index
+[10:19:14 ERR] Error creating index codetest.Models.User
+[10:19:14 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[10:19:36 ERR] An unhandled exception has occurred while executing the request.
+MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 3.120.95.31:27017
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.SslStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.GetAllSync(SortDefinition`1 sort, ProjectionDefinition`1 projection) in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 296
+   at codetest.Business_Logic.UserBL.GetAllUsersSync(IUserRepository _userRepository) in D:\My Projects\NewFirm Codetest\codetest\Business Logic\UserBL.cs:line 54
+   at codetest.Controllers.HomeController.Index() in D:\My Projects\NewFirm Codetest\codetest\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[10:20:14 DBG] Starting web host
+[10:20:21 DBG] Getting MongoCollection codetest.Models.User
+[10:20:22 DBG] Creating mongo index
+[10:20:29 DBG] Getting MongoCollection codetest.Models.User
+[10:20:29 DBG] Creating mongo index
+[10:20:42 DBG] Getting MongoCollection codetest.Models.User
+[10:20:42 DBG] Creating mongo index
+[10:21:49 DBG] Starting web host
+[10:21:51 DBG] Getting MongoCollection codetest.Models.User
+[10:21:51 DBG] Creating mongo index
+[10:21:56 DBG] Getting MongoCollection codetest.Models.User
+[10:21:56 DBG] Creating mongo index
+[10:22:04 DBG] Getting MongoCollection codetest.Models.User
+[10:22:04 DBG] Creating mongo index
+[10:22:14 ERR] Error creating index codetest.Models.User
+[10:22:14 ERR]    at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.CreateIndexesOperation.Execute(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperation[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperation[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IClientSessionHandle session, IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.<>c__DisplayClass9_0.<CreateMany>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CreateManyIndexesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.MongoIndexManager.CreateMany(IEnumerable`1 models, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoIndexManagerBase`1.CreateOne(IndexKeysDefinition`1 keys, CreateIndexOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.CreateIndex() in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 55
+[10:22:32 DBG] Getting MongoCollection codetest.Models.User
+[10:22:32 DBG] Creating mongo index
+[10:22:36 DBG] Getting MongoCollection codetest.Models.User
+[10:22:36 DBG] Creating mongo index
+[10:22:41 DBG] Getting MongoCollection codetest.Models.User
+[10:22:41 DBG] Creating mongo index
+[10:22:43 DBG] Getting MongoCollection codetest.Models.User
+[10:22:43 DBG] Creating mongo index
+[10:22:59 DBG] Getting MongoCollection codetest.Models.User
+[10:22:59 DBG] Creating mongo index
+[10:24:12 DBG] Getting MongoCollection codetest.Models.User
+[10:24:12 DBG] Creating mongo index
+[10:32:48 DBG] Getting MongoCollection codetest.Models.User
+[10:32:48 DBG] Creating mongo index
+[10:33:01 DBG] Getting MongoCollection codetest.Models.User
+[10:33:01 DBG] Creating mongo index
+[10:33:02 DBG] Getting MongoCollection codetest.Models.User
+[10:33:02 DBG] Creating mongo index
+[10:33:04 DBG] Getting MongoCollection codetest.Models.User
+[10:33:04 DBG] Creating mongo index
+[10:33:08 DBG] Getting MongoCollection codetest.Models.User
+[10:33:08 DBG] Creating mongo index
+[10:33:12 DBG] Getting MongoCollection codetest.Models.User
+[10:33:12 DBG] Creating mongo index
+[10:33:12 ERR] An unhandled exception has occurred while executing the request.
+System.IO.FileNotFoundException: Could not find file 'D:\My Projects\NewFirm Codetest\codetest\bin\Debug\netcoreapp2.2\users.json'.
+File name: 'D:\My Projects\NewFirm Codetest\codetest\bin\Debug\netcoreapp2.2\users.json'
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path)
+   at codetest.Utilities.GetUsersFromJson.Execute() in D:\My Projects\NewFirm Codetest\codetest\Utilities\GetUsersFromJson.cs:line 24
+   at codetest.Controllers.HomeController.Index() in D:\My Projects\NewFirm Codetest\codetest\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[10:33:47 DBG] Getting MongoCollection codetest.Models.User
+[10:33:47 DBG] Creating mongo index
+[15:08:40 DBG] Starting web host
+[15:08:54 DBG] Getting MongoCollection codetest.Models.User
+[16:48:26 DBG] Starting web host
+[16:48:37 DBG] Getting MongoCollection codetest.Models.User
+[16:49:23 ERR] An unhandled exception has occurred while executing the request.
+MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 3.120.95.31:27017
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.SslStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.GetAllSync(SortDefinition`1 sort, ProjectionDefinition`1 projection) in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 296
+   at codetest.Business_Logic.UserBL.GetAllUsersSync(IUserRepository _userRepository) in D:\My Projects\NewFirm Codetest\codetest\Business Logic\UserBL.cs:line 54
+   at codetest.Controllers.HomeController.Index() in D:\My Projects\NewFirm Codetest\codetest\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[16:49:36 DBG] Getting MongoCollection codetest.Models.User
+[21:29:11 DBG] Starting web host
+[21:29:26 DBG] Getting MongoCollection codetest.Models.User
+[22:53:39 DBG] Starting web host
+[22:53:54 DBG] Getting MongoCollection codetest.Models.User
+[22:54:02 DBG] Getting MongoCollection codetest.Models.User
+[22:54:09 DBG] Getting MongoCollection codetest.Models.User
+[22:54:16 DBG] Getting MongoCollection codetest.Models.User
+[22:54:16 ERR] Error creating index codetest.Models.User
+[22:54:16 ERR]    at MongoDB.Driver.ExpressionFieldDefinition`2.Render(IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.OperatorUpdateDefinition`2.Render(IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.MongoCollectionImpl`1.ConvertWriteModelToWriteRequest(WriteModel`1 model, Int32 index)
+   at System.Linq.Enumerable.SelectIterator[TSource,TResult](IEnumerable`1 source, Func`3 selector)+MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation..ctor(CollectionNamespace collectionNamespace, IEnumerable`1 requests, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.MongoCollectionImpl`1.CreateBulkWriteOperation(IEnumerable`1 requests, BulkWriteOptions options)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWrite(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass23_0.<BulkWrite>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWrite(IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.UpdateOne(FilterDefinition`1 filter, UpdateDefinition`1 update, UpdateOptions options, Func`3 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.UpdateOne(FilterDefinition`1 filter, UpdateDefinition`1 update, UpdateOptions options, CancellationToken cancellationToken)
+   at codetest.Repositories.UserRepository.ReplaceOneSync(Object id, User newValue) in D:\My Projects\NewFirm Codetest\codetest\Repositories\UserRespository.cs:line 118
+[22:54:20 DBG] Getting MongoCollection codetest.Models.User
+[22:54:34 DBG] Getting MongoCollection codetest.Models.User
+[22:54:37 DBG] Getting MongoCollection codetest.Models.User
+[22:58:06 DBG] Starting web host
+[22:58:13 DBG] Getting MongoCollection codetest.Models.User
+[22:58:46 ERR] An unhandled exception has occurred while executing the request.
+MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 3.120.95.31:27017
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.SslStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.AcquiredConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ServerChannelSource.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ChannelSourceHandle.GetChannel(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at codetest.Repositories.BaseRepository`1.GetAllSync(SortDefinition`1 sort, ProjectionDefinition`1 projection) in D:\My Projects\NewFirm Codetest\codetest\Repositories\BaseRepository.cs:line 233
+   at codetest.Business_Logic.UserBL.GetAllUsersSync(IUserRepository _userRepository) in D:\My Projects\NewFirm Codetest\codetest\Business Logic\UserBL.cs:line 54
+   at codetest.Controllers.HomeController.Index() in D:\My Projects\NewFirm Codetest\codetest\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[22:58:49 DBG] Getting MongoCollection codetest.Models.User
+[22:59:11 DBG] Getting MongoCollection codetest.Models.User
+[22:59:23 DBG] Getting MongoCollection codetest.Models.User

@@ -1,0 +1,24 @@
+﻿@using codetest.Models.ViewModels
+@model LoginsViewModel
+
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>LoginName</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var login in Model.Logins)
+            {
+            <tr>
+                <td>@login.UserLogin</td>
+                <td>@login.Password</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

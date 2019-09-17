@@ -7,10 +7,11 @@ using codetest.Models.Interfaces;
 using codetest.MongoDB.Interfaces;
 using MongoDB.Driver;
 using Serilog;
+using System.Reflection;
 
 namespace codetest.Repositories
 {
-    public class BaseRepository<T> : IRepository<T> where T : class, IEntity
+    public abstract class BaseRepository<T> : IRepository<T> where T : class, IEntity
     {
         protected IMongoCollection<T> MongoCollection { get; set; }
 
@@ -25,14 +26,14 @@ namespace codetest.Repositories
         protected void Initialize()
         {
             GetCollection();
-            if (MongoCollection == null) return;
+            if (MongoCollection != null) return;       
             Log.Debug("Creating mongo index");
             CreateIndex();
         }
 
         protected void GetCollection()
         {
-            var type = typeof(T);
+            Type type = typeof(T);
             if (MongoCollection != null) return;
             Log.Debug($"Getting MongoCollection {typeof(T)}");
             MongoCollection = _mongoDatabase.GetCollection<T>(type.Name);
@@ -42,15 +43,13 @@ namespace codetest.Repositories
         {
             try
             {
-                var indexDefinition = Builders<T>.IndexKeys.Combine(
-                    Builders<T>.IndexKeys.Descending(x => x.Id),
-                    Builders<T>.IndexKeys.Descending(x => x.Name),
-                    Builders<T>.IndexKeys.Descending(x => x.UserName),
-                    Builders<T>.IndexKeys.Descending(x => x.Email),
-                    Builders<T>.IndexKeys.Descending(x => x.PhoneNumber),
-                    Builders<T>.IndexKeys.Descending(x => x.CreatedAt),
-                    Builders<T>.IndexKeys.Descending(x => x.ModifiedAt)
-                );
+                List<IndexKeysDefinition<T>> keys = new List<IndexKeysDefinition<T>>();
+                PropertyInfo[] Tproperties = typeof(T).GetProperties();
+                for (int i = 0; i < Tproperties.Length; i++)
+                {
+                    keys.Add(Builders<T>.IndexKeys.Descending(x => Tproperties[i].GetValue(x)));
+                }
+                var indexDefinition = Builders<T>.IndexKeys.Combine(keys);
 
                 MongoCollection.Indexes.CreateOne(indexDefinition);
             }
@@ -61,63 +60,28 @@ namespace codetest.Repositories
             }
         }
 
-        public void AddSync(T entity)
+        public virtual void AddSync(T entity)
         {
-            var now = System.DateTime.Now;
-            entity.AddedAt = now;
-            entity.ModifiedAt = now;
-            entity.CreatedAt = now;
-
             MongoCollection.InsertOne(entity);
         }
 
-        public async Task Add(T entity)
+        public virtual async Task Add(T entity)
         {
-            var now = System.DateTime.Now;
-            entity.AddedAt = now;
-            entity.ModifiedAt = now;
-            entity.CreatedAt = now;
-
             await MongoCollection.InsertOneAsync(entity);
         }
 
-        public async Task AddMany(ICollection<T> entities)
+        public virtual async Task AddMany(ICollection<T> entities)
         {
-            var now = System.DateTime.Now;
-
-            foreach (var entity in entities)
-            {
-                entity.AddedAt = now;
-                entity.ModifiedAt = now;
-                entity.CreatedAt = now;
-            }
-
             await MongoCollection.InsertManyAsync(entities);
         }
 
-        public void AddManySync(ICollection<T> entities)
+        public virtual void AddManySync(ICollection<T> entities)
         {
-            var now = System.DateTime.Now;
-
-            foreach (var entity in entities)
-            {
-                entity.AddedAt = now;
-                entity.ModifiedAt = now;
-                entity.CreatedAt = now;
-            }
-
             MongoCollection.InsertMany(entities);
         }
 
-        public async Task BulkInsert(ICollection<T> entities)
+        public virtual async Task BulkInsert(ICollection<T> entities)
         {
-            var now = System.DateTime.Now;
-
-            foreach (var entity in entities)
-            {
-                entity.ModifiedAt = now;
-            }
-
             var stores = new List<WriteModel<T>>();
 
             stores.AddRange(entities.Select(x => new InsertOneModel<T>(x)));
@@ -125,15 +89,8 @@ namespace codetest.Repositories
             await MongoCollection.BulkWriteAsync(stores);
         }
 
-        public void BulkInsertSync(ICollection<T> entities)
+        public virtual void BulkInsertSync(ICollection<T> entities)
         {
-            var now = System.DateTime.Now;
-
-            foreach (var entity in entities)
-            {
-                entity.ModifiedAt = now;
-            }
-
             var stores = new List<WriteModel<T>>();
 
             stores.AddRange(entities.Select(x => new InsertOneModel<T>(x)));
@@ -156,19 +113,12 @@ namespace codetest.Repositories
             await MongoCollection.DeleteOneAsync(Builders<T>.Filter.Eq(e => e.Id, entity.Id));
         }
 
-        public async Task ReplaceOne(T entity, T newValue)
+        public virtual async Task ReplaceOne(T entity, T newValue)
         {
             try
             {
-                var update = Builders<T>.Update
-                            .Set(x => x.ModifiedAt, DateTime.UtcNow)
-                            .Set(x => x.Name, newValue.Name)
-                            .Set(x => x.UserName, newValue.UserName)
-                            .Set(x => x.PhoneNumber, newValue.PhoneNumber)
-                            .Set(x => x.Email, newValue.Email)
-                            .Set(x => x.Address, newValue.Address);
-
-                await MongoCollection.UpdateOneAsync(FilterId(entity.Id), update);
+                UpdateObj(entity, newValue);
+                await MongoCollection.ReplaceOneAsync<T>(x => x.Id == entity.Id, entity);        //the oldValue now is supposed to be updated with the newValue :)
             }
             catch (Exception exception)
             {
@@ -177,22 +127,13 @@ namespace codetest.Repositories
             }
         }
 
-        public async Task ReplaceOne(Expression<Func<T, bool>> filter, T newValue)
+        public virtual async Task ReplaceOne(Expression<Func<T, bool>> filter, T newValue)
         {
-            var now = System.DateTime.Now;
-            newValue.ModifiedAt = now;
-
             try
             {
-                var update = Builders<T>.Update
-                            .Set(x => x.ModifiedAt, DateTime.UtcNow)
-                            .Set(x => x.Name, newValue.Name)
-                            .Set(x => x.UserName, newValue.UserName)
-                            .Set(x => x.PhoneNumber, newValue.PhoneNumber)
-                            .Set(x => x.Email, newValue.Email)
-                            .Set(x => x.Address, newValue.Address);
-
-                await MongoCollection.UpdateOneAsync(filter, update);
+                T oldValue = GetSingleByExpressionSync(filter);
+                UpdateObj(oldValue, newValue);
+                await MongoCollection.ReplaceOneAsync<T>(filter, oldValue);        //the oldValue now is supposed to be updated with the newValue :)
             }
             catch (Exception exception)
             {
@@ -201,22 +142,13 @@ namespace codetest.Repositories
             }
         }
 
-        public void ReplaceOneSync(object id, T newValue)
+        public virtual void ReplaceOneSync(object id, T newValue)
         {
-            var now = System.DateTime.Now;
-            newValue.ModifiedAt = now;
-
             try
             {
-                var update = Builders<T>.Update
-                            .Set(x => x.ModifiedAt, DateTime.UtcNow)
-                            .Set(x => x.Name, newValue.Name)
-                            .Set(x => x.UserName, newValue.UserName)
-                            .Set(x => x.PhoneNumber, newValue.PhoneNumber)
-                            .Set(x => x.Email, newValue.Email)
-                            .Set(x => x.Address, newValue.Address);
-
-                MongoCollection.UpdateOne(FilterId(id), update);
+                T oldValue = GetSingleByExpressionSync(x => x.Id == id.ToString());
+                UpdateObj(oldValue, newValue);
+                MongoCollection.ReplaceOne(FilterId(id), oldValue);        //the oldValue now is supposed to be updated with the newValue :)
             }
             catch (Exception exception)
             {
@@ -225,22 +157,15 @@ namespace codetest.Repositories
             }
         }
 
-        public void ReplaceOneSync(Expression<Func<T, bool>> filter, T newValue)
-        {
-            var now = System.DateTime.Now;
-            newValue.ModifiedAt = now;
+        
 
+        public virtual void ReplaceOneSync(Expression<Func<T, bool>> filter, T newValue)
+        {
             try
             {
-                var update = Builders<T>.Update
-                            .Set(x => x.ModifiedAt, DateTime.UtcNow)
-                            .Set(x => x.Name, newValue.Name)
-                            .Set(x => x.UserName, newValue.UserName)
-                            .Set(x => x.PhoneNumber, newValue.PhoneNumber)
-                            .Set(x => x.Email, newValue.Email)
-                            .Set(x => x.Address, newValue.Address);
-
-                MongoCollection.UpdateOne(filter, update);
+                T oldValue = GetSingleByExpressionSync(filter);
+                UpdateObj(oldValue,newValue);
+                MongoCollection.ReplaceOne<T>(filter, oldValue);        //the oldValue now is supposed to be updated with the newValue :)
             }
             catch (Exception exception)
             {
@@ -249,7 +174,18 @@ namespace codetest.Repositories
             }
         }
 
-        private static FilterDefinition<T> FilterId(object key)
+        //made to replace repetitive logic in replace functions
+        protected virtual void UpdateObj(T oldValue, T newValue)
+        {
+            PropertyInfo[] Tproperties = typeof(T).GetProperties();
+            for (int i = 1; i < Tproperties.Length; i++)
+            {
+                if (Tproperties[i].Name != "Id")
+                    Tproperties[i].SetValue(oldValue, Tproperties[i].GetValue(newValue));
+            }
+        }
+
+        protected static FilterDefinition<T> FilterId(object key)
         {
             return Builders<T>.Filter.Eq("Id", key);
         }
